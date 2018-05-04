@@ -445,6 +445,13 @@ public class RNPushNotificationHelper {
         notificationManager.cancel(notificationID);
     }
 
+    public void clearNotificationWithTag(String notificationTag, int notificationID) {
+        Log.i(LOG_TAG, "Clearing notification: " + notificationTag + ", " + notificationID);
+
+        NotificationManager notificationManager = notificationManager();
+        notificationManager.cancel(notificationTag, notificationID);
+    }
+
     public void cancelAllScheduledNotifications() {
         Log.i(LOG_TAG, "Cancelling all notifications");
 
