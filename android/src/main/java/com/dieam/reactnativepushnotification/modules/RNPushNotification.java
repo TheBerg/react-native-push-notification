@@ -178,7 +178,7 @@ public class RNPushNotification extends ReactContextBaseJavaModule implements Ac
      */
     public void cancelAllLocalNotifications() {
         mRNPushNotificationHelper.cancelAllScheduledNotifications();
-        mRNPushNotificationHelper.clearNotifications();
+        mRNPushNotificationHelper.clearLocalNotifications();
     }
 
     @ReactMethod
@@ -196,18 +196,18 @@ public class RNPushNotification extends ReactContextBaseJavaModule implements Ac
 
     @ReactMethod
     /**
-     * Clear notification from the notification centre.
+     * Clear notification with id from the notification centre.
      */
     public void clearLocalNotification(int notificationID) {
-        mRNPushNotificationHelper.clearNotification(notificationID);
+        mRNPushNotificationHelper.clearLocalNotification(notificationID);
     }
 
     @ReactMethod
     /**
-     * Clear notification from the notification centre.
+     * Clear notification with id and tag from the notification centre.
      */
-    public void clearNotificationWithTag(String notificationTag, int notificationID) {
-        mRNPushNotificationHelper.clearNotificationWithTag(notificationTag, notificationID);
+    public void clearLocalNotificationWithTag(String notificationTag, int notificationID) {
+        mRNPushNotificationHelper.clearLocalNotificationWithTag(notificationTag, notificationID);
     }
 
     @ReactMethod

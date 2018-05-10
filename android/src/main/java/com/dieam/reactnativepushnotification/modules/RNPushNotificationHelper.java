@@ -431,21 +431,21 @@ public class RNPushNotificationHelper {
         }
     }
 
-    public void clearNotifications() {
+    public void clearLocalNotifications() {
         Log.i(LOG_TAG, "Clearing alerts from the notification centre");
 
         NotificationManager notificationManager = notificationManager();
         notificationManager.cancelAll();
     }
 
-    public void clearNotification(int notificationID) {
+    public void clearLocalNotification(int notificationID) {
         Log.i(LOG_TAG, "Clearing notification: " + notificationID);
 
         NotificationManager notificationManager = notificationManager();
         notificationManager.cancel(notificationID);
     }
 
-    public void clearNotificationWithTag(String notificationTag, int notificationID) {
+    public void clearLocalNotificationWithTag(String notificationTag, int notificationID) {
         Log.i(LOG_TAG, "Clearing notification: " + notificationTag + ", " + notificationID);
 
         NotificationManager notificationManager = notificationManager();

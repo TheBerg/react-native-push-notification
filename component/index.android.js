@@ -40,11 +40,11 @@ NotificationsComponent.prototype.clearLocalNotification = function(
   RNPushNotification.clearLocalNotification(details);
 };
 
-NotificationsComponent.prototype.clearNotificationWithTag = function(
+NotificationsComponent.prototype.clearLocalNotificationWithTag = function(
   tag: Object,
   notificationId: Object
 ) {
-  RNPushNotification.clearLocalNotification(tag, notificationId);
+  RNPushNotification.clearLocalNotificationWithTag(tag, notificationId);
 };
 
 NotificationsComponent.prototype.cancelAllLocalNotifications = function() {
